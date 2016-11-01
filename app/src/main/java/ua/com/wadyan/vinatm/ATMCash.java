@@ -10,7 +10,7 @@ import ua.com.wadyan.vinatm.Model.User;
  * Created by << Wad + >> on 01.11.2016.
  */
 
-public class CashInATM {
+public class ATMCash {
     private int sumCash;
     private int possibilityID = 0;
     User user = GlobalConstVar.getCurrentUser();
@@ -20,7 +20,7 @@ public class CashInATM {
     private TwoHundredUAH twoHundredUAH = new TwoHundredUAH();
     private FiveHundredUAH fiveHundredUAH = new FiveHundredUAH();
 
-    public CashInATM() {
+    public ATMCash() {
         fiftyUAH.setReminder(2);
         oneHundredUAH.setReminder(2);
         twoHundredUAH.setReminder(2);
@@ -28,12 +28,20 @@ public class CashInATM {
     }
 
     public int possibilityGetMoney(int userSum){
+        resetCashToEject();
         maxDayLimitValidation(userSum);
         maxATMCashReminderValidation(userSum);
         maxUserMoneyReminder(userSum);
         maxBanknote(userSum);
         maxCountValidation(userSum);
         return possibilityID;
+    }
+
+    void resetCashToEject(){
+        fiftyUAH.setToEject(0);
+        oneHundredUAH.setToEject(0);
+        twoHundredUAH.setToEject(0);
+        fiveHundredUAH.setToEject(0);
     }
 
     void maxDayLimitValidation(int userSum){

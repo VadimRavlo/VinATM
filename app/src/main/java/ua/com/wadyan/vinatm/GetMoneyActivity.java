@@ -30,7 +30,7 @@ public class GetMoneyActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         String message = "";
-        CashInATM cashInATM = new CashInATM();
+        ATMCash cashInATM = new ATMCash();
 
         userSum = Integer.parseInt(String.valueOf(mEtSum.getText()));
 
