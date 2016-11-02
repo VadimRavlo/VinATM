@@ -2,5 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="Внесіть кошти. Банкомат очікує на кошти . . ."/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_deposit_money_finish"
+        android:text="Завершити внесення коштів"
+        android:background="@drawable/btn_red"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="60dp"/>
 </LinearLayout>
