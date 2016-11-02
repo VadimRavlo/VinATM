@@ -16,4 +16,28 @@
 		<item name="android:textColor">@android:color/white</item>
 	</style>
 
+	<style name="NominalsTextView">
+		<item name="android:layout_width">70dp</item>
+		<item name="android:layout_height">30dp</item>
+		<item name="android:layout_marginRight">10dp</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:textSize">13sp</item>
+	</style>
+
+	<style name="SignInSuccessActivityButton">
+		<item name="android:layout_width">250dp</item>
+		<item name="android:layout_height">80dp</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:textSize">27sp</item>
+		<item name="android:layout_marginBottom">10dp</item>
+	</style>
+
+	<style name="GeneralTextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+	</style>
+
 </resources>

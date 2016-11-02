@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Signin</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">VinATM</string>
     <string name="action_settings">Settings</string>
-	<string name="username">Username</string>
+	<string name="username">Користувач</string>
 	<string name="sign_in">Sign In</string>
-	<string name="password">Password</string>
+	<string name="password">Пароль</string>
 	<string name="sign_in_error">Sign in error.</string>
 	<string name="sign_in_succeeded">Sign in succeeded</string>
-	<string name="btn_get_money">Get Money</string>
-	<string name="btn_deposit_money">Deposit Money</string>
-	<string name="btn_exit_second_activity">Exit</string>
+	<string name="btn_eject_money">Видати кошти</string>
+	<string name="btn_deposit_money">Внести кошти</string>
+	<string name="btn_exit_second_activity">Вийти</string>
+	<string name="set_day_cash_limit">Максимальний ліміт на зняття готівки становить 550 грн.</string>
+	<string name="nominal_val_avaliable">В даний час доступні наступні номінали:</string>
+	<string name="choiсe_banknote">Вибір номіналу купюр</string>
+	<string name="account_not_enough_money">На вашому рахунку недостатня кількість коштів</string>
+	<string name="atm_not_enough_money">У банкоматі відсутня така кількість коштів. Введіть меншу суму</string>
+	<string name="outdone_max_day_limit">Перевищений максимальний денний ліміт коштів. Зверніться в наступний день</string>
+	<string name="outdone_max_day_count">Кошти в банкоматі дозволяється отримувати не більше двох разів на день. Зверніться в наступний день</string>
+	<string name="exceeded_banknote">Недостатня кількість банкнот належного номіналу. Введіть суму, кратну доступному номіналу банкнот</string>
+	<string name="not_enter_sum">Ви не ввели суму!</string>
+	<string name="cash_eject_allowed">Видачу коштів дозволено. Будь ласка, заберіть кошти з лотка протягом 30 секунд. Видано такі банкноти: </string>
+	<string name="_50">Номінал 50 грн.</string>
+	<string name="avaliable_items">Доступно __ од.</string>
+	<string name="_100">Номінал 100 грн.</string>
+	<string name="_200">Номінал 200 грн.</string>
+	<string name="_500">Номінал 500 грн.</string>
+	<string name="finish_input">Завершити введення</string>
+	<string name="press_back_key">Натисність кнопку Back для повернення до пепереднього діалогового вікна для введення однієї суми</string>
+	<string name="enter_sum">Введіть суму коштів для зняття</string>
+	<string name="eject_money">Видати кошти</string>
 
 </resources>

@@ -15,47 +15,32 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/tv_balance"
-		android:layout_gravity="top|center_horizontal"
-		android:text=""
-		android:textSize="40sp"
+		android:layout_gravity="center_vertical|center_horizontal"
+		android:textSize="50sp"
+		android:textStyle="bold"
 		android:textColor="#333333"
-		android:layout_marginBottom="80dp"/>
+		android:layout_marginTop="40dp"
+		android:layout_marginBottom="40dp"/>
 
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical">
 		<Button
-			android:layout_width="250dp"
-			android:layout_height="80dp"
+			style="@style/SignInSuccessActivityButton"
 			android:id="@+id/btn_get_money"
-			android:text="@string/btn_get_money"
-			android:background="#9e3434"
-			android:layout_gravity="center_horizontal"
-			android:textSize="25sp"
-			android:layout_marginRight="10dp"
-			android:layout_marginBottom="10dp"
-			/>
+			android:text="@string/btn_eject_money"
+			android:background="#9e3434"/>
 		<Button
-			android:layout_width="250dp"
-			android:layout_height="80dp"
+			style="@style/SignInSuccessActivityButton"
 			android:id="@+id/btn_deposit_money"
 			android:text="@string/btn_deposit_money"
-			android:background="#349e3f"
-			android:layout_gravity="center_horizontal"
-			android:textSize="25sp"
-			android:layout_marginBottom="10dp"
-			android:layout_marginRight="10dp"/>
+			android:background="#349e3f"/>
 		<Button
-			android:layout_width="250dp"
-			android:layout_height="80dp"
+			style="@style/SignInSuccessActivityButton"
 			android:id="@+id/btn_exit_second_activity"
 			android:text="@string/btn_exit_second_activity"
-			android:background="#43514e"
-			android:layout_gravity="center_horizontal"
-			android:textSize="25sp"
-			android:layout_marginRight="10dp"/>
-
+			android:background="#43514e"/>
 	</LinearLayout>
 
 </LinearLayout>

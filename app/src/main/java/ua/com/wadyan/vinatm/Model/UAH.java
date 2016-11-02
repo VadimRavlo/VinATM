@@ -5,31 +5,27 @@ package ua.com.wadyan.vinatm.Model;
  */
 
 abstract class UAH {
-    private int nominal;
-    private int reminder;
-    private int toEject;
+    private static int nominal;
+    private static int reminder;
+    private static int toEject;
 
-    public int getNominal() {
+    public static int getNominal() {
         return nominal;
     }
 
-    public void setNominal(int nominal) {
-        this.nominal = nominal;
-    }
-
-    public int getReminder() {
+    public static int getReminder() {
         return reminder;
     }
 
-    public void setReminder(int reminder) {
-        this.reminder = reminder;
+    public static void setReminder(int reminder) {
+        UAH.reminder = reminder;
     }
 
-    public int getToEject() {
+    public static int getToEject() {
         return toEject;
     }
 
-    public void setToEject(int toEject) {
-        this.toEject = toEject;
+    public static void setToEject(int toEject) {
+        UAH.toEject = toEject;
     }
 }

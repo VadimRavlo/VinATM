@@ -6,25 +6,15 @@ import ua.com.wadyan.vinatm.GlobalConstVar;
 import ua.com.wadyan.vinatm.Model.User;
 
 class BackendCommunicatorStub implements BackendCommunicator {
-	public User[] userList = new User[5];
-	boolean mValidUsername, mValidPassword;
-
-	public BackendCommunicatorStub() {
-		for (int i = 0; i < 5; i++) {
-			userList[i] = new User("user"+i, "qwerty"+i, i*150);
-			Log.d("Wad", "User" + i + " created");
-		}
-	}
+	private boolean mValidUsername, mValidPassword;
 
 	@Override
 	public boolean postSignIn(final String userName, final String password) throws InterruptedException {
 		Thread.sleep(500);
-		for (int i = 0; i < userList.length; i++) {
-			User user = userList[i];
-			for (int j = 0; j < 3; j++) {
-				mValidUsername = user.getName().equals(userName);
-				mValidPassword = user.getPassword().equals(password);
-			}
+		for (int i = 0; i < GlobalConstVar.getUserList().length; i++) {
+			User user = GlobalConstVar.getUserList()[i];
+			mValidUsername = user.getName().equals(userName);
+			mValidPassword = user.getPassword().equals(password);
 			GlobalConstVar.setCurrentUser(user);
 			if (mValidUsername && mValidPassword) break;
 		}

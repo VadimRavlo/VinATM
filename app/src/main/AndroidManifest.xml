@@ -8,16 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".signin.SignInActivity" android:label="@string/app_name">
+        <activity android:name=".Activitys.SignInActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity" android:label="@string/app_name"/>
-        <activity android:name=".GetMoneyActivity" android:label="@string/btn_get_money"/>
-        <activity android:name=".DepositMonetActivity" android:label="@string/btn_deposit_money"/>
+        <activity android:name=".Activitys.SecondActivity" android:label="@string/app_name"/>
+        <activity android:name=".Activitys.EjectMoneyActivity" android:label="@string/btn_eject_money"/>
+        <activity android:name=".Activitys.DepositMoneyActivity" android:label="@string/btn_deposit_money"/>
+        <activity android:name=".Activitys.ChoiceBanknotesActivity" android:label="@string/choiсe_banknote"/>
     </application>
 
 </manifest>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        style="@style/GeneralTextView"
+        android:textSize="20sp"
+        android:text="@string/set_day_cash_limit"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        style="@style/GeneralTextView"
+        android:textSize="15sp"
+        android:text="@string/nominal_val_avaliable"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+            style="@style/NominalsTextView"
+            android:id="@+id/tv_money_nominal_50"
+            android:background="#FFFF00"/>
+        <TextView
+            style="@style/NominalsTextView"
+            android:id="@+id/tv_money_nominal_100"
+            android:background="#99009900"/>
+        <TextView
+            style="@style/NominalsTextView"
+            android:id="@+id/tv_money_nominal_200"
+            android:background="#FFFF99"/>
+        <TextView
+            style="@style/NominalsTextView"
+            android:id="@+id/tv_money_nominal_500"
+            android:background="#00eaff"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_sum"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_sum"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textColor="#FFFF0000"
+        android:inputType="number" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:id="@+id/btn_get_money_finish"
+        android:background="@drawable/btn_red"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:text="@string/eject_money"
+        android:textSize="30sp"/>
+
+</LinearLayout>

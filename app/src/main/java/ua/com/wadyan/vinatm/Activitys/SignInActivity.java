@@ -1,4 +1,4 @@
-package ua.com.wadyan.vinatm.signin;
+package ua.com.wadyan.vinatm.Activitys;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,7 +12,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import ua.com.wadyan.vinatm.GlobalConstVar;
 import ua.com.wadyan.vinatm.R;
-import ua.com.wadyan.vinatm.Activitys.SecondActivity;
+import ua.com.wadyan.vinatm.signin.SignInModel;
+import ua.com.wadyan.vinatm.signin.SignInWorkerFragment;
 
 import static ua.com.wadyan.vinatm.GlobalConstVar.LOG_TAG;
 

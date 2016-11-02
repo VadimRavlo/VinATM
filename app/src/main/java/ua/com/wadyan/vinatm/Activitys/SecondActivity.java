@@ -1,4 +1,4 @@
-package ua.com.wadyan.vinatm;
+package ua.com.wadyan.vinatm.Activitys;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import ua.com.wadyan.vinatm.GlobalConstVar;
 import ua.com.wadyan.vinatm.Model.User;
+import ua.com.wadyan.vinatm.R;
 
 public class SecondActivity extends Activity implements View.OnClickListener{
 
@@ -43,18 +45,20 @@ public class SecondActivity extends Activity implements View.OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()){
 			case R.id.btn_get_money:
-				startActivity(new Intent(this, GetMoneyActivity.class));
+				startActivity(new Intent(this, EjectMoneyActivity.class));
+				finish();
 				break;
 			case R.id.btn_deposit_money:
-				startActivity(new Intent(this, DepositMonetActivity.class));
+				startActivity(new Intent(this, DepositMoneyActivity.class));
+				finish();
 				break;
 			case R.id.btn_exit_second_activity:
+				startActivity(new Intent(this, SignInActivity.class));
 				finish();
-				Toast.makeText(this, "By by!", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "Допобачення! Приходьте іще!", Toast.LENGTH_SHORT).show();
 				break;
 			default:
 				break;
 		}
-
 	}
 }
