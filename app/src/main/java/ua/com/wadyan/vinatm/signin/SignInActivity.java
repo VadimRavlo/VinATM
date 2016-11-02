@@ -8,17 +8,21 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import ua.com.wadyan.vinatm.GlobalConstVar;
 import ua.com.wadyan.vinatm.R;
-import ua.com.wadyan.vinatm.SecondActivity;
+import ua.com.wadyan.vinatm.Activitys.SecondActivity;
+
+import static ua.com.wadyan.vinatm.GlobalConstVar.LOG_TAG;
 
 public class SignInActivity extends Activity implements SignInModel.Observer {
-	private static final String LOG_TAG = "SignInActivity";
 	private static final String TAG_WORKER = "TAG_WORKER";
 
-	private EditText mUserName;
-	private EditText mPassword;
-	private View mSubmit;
-	private View mProgress;
+	@Bind(R.id.view_username) EditText mUserName;
+	@Bind(R.id.view_password) EditText mPassword;
+	@Bind(R.id.view_submit) View mSubmit;
+	@Bind(R.id.view_progress) View mProgress;
 
 	private SignInModel mSignInModel;
 
@@ -28,12 +32,10 @@ public class SignInActivity extends Activity implements SignInModel.Observer {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sign_in);
 
-		mUserName = (EditText) findViewById(R.id.view_username);
-		mPassword = (EditText) findViewById(R.id.view_password);
-		mSubmit = findViewById(R.id.view_submit);
-		mProgress = findViewById(R.id.view_progress);
+		GlobalConstVar.createUsers();
+		GlobalConstVar.fillingATM();
 
-		setUsers();
+		ButterKnife.bind(this);
 
 		mSubmit.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -59,12 +61,7 @@ public class SignInActivity extends Activity implements SignInModel.Observer {
 
 			mSignInModel = workerFragment.getSignInModel();
 		}
-
 		mSignInModel.registerObserver(this);
-	}
-
-	private void setUsers(){
-
 	}
 
 	@Override
@@ -72,6 +69,7 @@ public class SignInActivity extends Activity implements SignInModel.Observer {
 		Log.i(LOG_TAG, "onDestroy");
 		super.onDestroy();
 		mSignInModel.unregisterObserver(this);
+		ButterKnife.unbind(this);
 
 		if (isFinishing()) {
 			mSignInModel.stopSignIn();
