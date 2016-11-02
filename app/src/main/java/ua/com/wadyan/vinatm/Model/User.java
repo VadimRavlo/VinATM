@@ -10,10 +10,10 @@ public class User {
     private int moneyBalance;
     private int countGetMoneyDay;
 
-    public User(String userName, String password, int userBalance) {
+    public User(String userName, String password, int moneyBalance) {
         this.name = userName;
         this.password = password;
-        this.moneyBalance = userBalance;
+        this.moneyBalance = moneyBalance;
     }
 
     public String getName() {
